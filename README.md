@@ -1,5 +1,6 @@
 # Android-ViewPager
 ------------------------------2015-10-12更新内容-----------------------------
+
 增加欢迎页最后一页，进入程序主内容的按钮以及对应功能
 
 ![image](https://raw.githubusercontent.com/geniussyx/Android-ViewPager/master/image-folder/image4.png)
