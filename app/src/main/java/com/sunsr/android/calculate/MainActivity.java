@@ -28,6 +28,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         for(int pic:pics){
+            if(pic == R.drawable.guide5){
+                continue;
+            }
             ImageView imageView = new ImageView(this);
             imageView.setImageResource(pic);
             viewList.add(imageView);
