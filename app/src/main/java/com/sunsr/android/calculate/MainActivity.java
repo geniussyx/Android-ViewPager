@@ -1,20 +1,16 @@
 package com.sunsr.android.calculate;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,12 +27,25 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         for(int pic:pics){
             ImageView imageView = new ImageView(this);
             imageView.setImageResource(pic);
             viewList.add(imageView);
         }
+        LayoutInflater inf = LayoutInflater.from(this);
+        View guide6View = inf.inflate(R.layout.startlayout,null);
+        viewList.add(guide6View);
+
+        Button startButton = (Button)guide6View.findViewById(R.id.startButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,GuideViewDoor.class);
+                startActivity(intent);
+                MainActivity.this.finish();
+            }
+        });
 
         MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter(viewList);
         final ViewPager viewPager = (ViewPager)findViewById(R.id.viewPager);
@@ -77,7 +86,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void onPageScrollStateChanged(int i) {
-
             }
         });
     }
