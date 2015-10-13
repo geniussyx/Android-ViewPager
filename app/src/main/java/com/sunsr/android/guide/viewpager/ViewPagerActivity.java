@@ -1,4 +1,4 @@
-package com.sunsr.android.calculate;
+package com.sunsr.android.guide.viewpager;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,11 +12,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.sunsr.android.guide.R;
+import com.sunsr.android.guide.GuideViewDoor;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends Activity {
+public class ViewPagerActivity extends Activity {
 
    private static int[] pics =  {R.drawable.guide1,R.drawable.guide2,R.drawable.guide3,R.drawable.guide4,R.drawable.guide5};
 
@@ -26,7 +29,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_viewpager);
         for(int pic:pics){
             if(pic == R.drawable.guide5){
                 continue;
@@ -44,9 +47,9 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,GuideViewDoor.class);
+                intent.setClass(ViewPagerActivity.this,GuideViewDoor.class);
                 startActivity(intent);
-                MainActivity.this.finish();
+                ViewPagerActivity.this.finish();
             }
         });
 

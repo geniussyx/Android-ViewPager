@@ -1,4 +1,4 @@
-package com.sunsr.android.calculate;
+package com.sunsr.android.guide.viewpager;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

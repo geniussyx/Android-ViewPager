@@ -1,4 +1,4 @@
-package com.sunsr.android.calculate;
+package com.sunsr.android.guide;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
