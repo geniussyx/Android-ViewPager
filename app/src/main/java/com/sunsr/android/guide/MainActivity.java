@@ -8,7 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.sunsr.android.guide.imageanim.FirstUserActivityForImageAnim;
 import com.sunsr.android.guide.imageanim.ImageViewActivity;
+import com.sunsr.android.guide.viewpager.FirstUserActivityForViewPager;
 import com.sunsr.android.guide.viewpager.ViewPagerActivity;
 
 
@@ -24,7 +26,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,ViewPagerActivity.class);
+                intent.setClass(MainActivity.this,FirstUserActivityForViewPager.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +36,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,ImageViewActivity.class);
+                intent.setClass(MainActivity.this,FirstUserActivityForImageAnim.class);
                 startActivity(intent);
             }
         });
